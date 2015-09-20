@@ -9,6 +9,7 @@ import flixel.util.FlxMath;
 import flixel.util.FlxDestroyUtil;
 import flixel.addons.ui.FlxInputText;
 import flixel.util.FlxColor;
+import gui.CustomInputText;
 using flixel.util.FlxSpriteUtil;
 
 /**
@@ -19,8 +20,8 @@ class LoginState extends FlxState
 {
 	private var _btnLogin:FlxButton;
 	private var _background:FlxSprite;
-	private var _usernameInput:FlxInputText;
-	private var _passwordInput:FlxInputText;
+	private var _usernameInput:CustomInputText;
+	private var _passwordInput:CustomInputText;
 	private var _username:String;
 	private var _password:String;
 	
@@ -30,11 +31,12 @@ class LoginState extends FlxState
 	override public function create():Void
 	{
 		// Add background
-		_background = new FlxSprite(0, 0, AssetPaths.blue_wallpaper_640x480__jpg);
+		_background = new FlxSprite();
+		_background.makeGraphic(640, 480, FlxColor.BLUE);
 		add(_background);
 		
 		// Add username input text field
-		_usernameInput = new FlxInputText(0, 0, 150, "Username", 12, FlxColor.WHITE, FlxColor.GRAY, true);
+		_usernameInput = new CustomInputText(0, 0, 150, "Username", 12, FlxColor.WHITE, FlxColor.GRAY, true, AssetPaths.ARIAL__TTF);
 		_usernameInput.x = (FlxG.width / 2) - (_usernameInput.width / 2);
 		_usernameInput.y = (FlxG.height * 3.2 / 5) - (_usernameInput.height / 2);
 		_usernameInput.fieldBorderThickness = 0;
@@ -42,7 +44,7 @@ class LoginState extends FlxState
 		add(_usernameInput);
 		
 		// Add password input text field
-		_passwordInput = new FlxInputText(0, 0, 150, "Password", 12, FlxColor.WHITE, FlxColor.GRAY, true);
+		_passwordInput = new CustomInputText(0, 0, 150, "Password", 12, FlxColor.WHITE, FlxColor.GRAY, true, AssetPaths.ARIAL__TTF);
 		_passwordInput.x = (FlxG.width / 2) - (_passwordInput.width / 2);
 		_passwordInput.y = (FlxG.height * 3.5 / 5) - (_passwordInput.height / 2);
 		_passwordInput.fieldBorderThickness = 0;

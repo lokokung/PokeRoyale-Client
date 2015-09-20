@@ -2,6 +2,7 @@ package sprites.maps;
 
 import flixel.addons.editors.ogmo.FlxOgmoLoader;
 import flixel.tile.FlxTilemap;
+import flixel.FlxG;
 
 /**
  * ...
@@ -19,6 +20,7 @@ class MapFactory
 	{
 		var mapLoader = new FlxOgmoLoader(ogmoMap);
 		var map = mapLoader.loadTilemap(tileSet, 24, 24, layerName);
+		map.setPosition(288 - FlxG.width, 288 - FlxG.height);
 		return map;
 	}
 	

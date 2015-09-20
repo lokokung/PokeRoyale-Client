@@ -5,5 +5,9 @@ package sprites;
  */
 interface IPokemon 
 {
-  
+	public var x(default, set):Float;
+	public var y(default, set):Float;
+	public var xOffset:Float;
+	public var yOffset:Float;
+	public var shadowSize:Int;
 }
