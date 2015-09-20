@@ -1,8 +1,6 @@
 package;
 
-@:build(flixel.system.FlxAssets.buildFileReferences("assets/pokesprites", false))
-@:build(flixel.system.FlxAssets.buildFileReferences("assets/data", false))
-@:build(flixel.system.FlxAssets.buildFileReferences("assets/tiles", false))
-@:build(flixel.system.FlxAssets.buildFileReferences("assets/levels", false))
-@:build(flixel.system.FlxAssets.buildFileReferences("assets/fonts", false))
+@:build(flixel.system.FlxAssets.buildFileReferences("assets/tiles", false, ["png"]))
+@:build(flixel.system.FlxAssets.buildFileReferences("assets/levels", false, ["oel"]))
+@:build(flixel.system.FlxAssets.buildFileReferences("assets/fonts", false, ["TTF"]))
 class AssetPaths {}
