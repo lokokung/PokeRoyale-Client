@@ -14,7 +14,7 @@ class PokeMapHandler
 	}
 	
 	public function placePokemon(TileMap:FlxTilemap, 
-		Pokemon:IPokemon, MapX:Float, MapY:Float, Shadow:Bool)
+		Pokemon:IPokemon, MapX:Float, MapY:Float, ?Shadow:Bool=true)
 	{
 		Pokemon.x = TileMap.x + Pokemon.xOffset + 24 * MapX;
 		Pokemon.y = TileMap.y + Pokemon.yOffset + 24 * MapY;

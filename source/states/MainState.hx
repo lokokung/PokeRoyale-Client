@@ -4,6 +4,9 @@ import flixel.FlxState;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
+import sprites.maps.MapFactory;
+import sprites.PokeMapHandler;
+import sprites.pokemon.Pikachu;
 
 /**
  * ...
@@ -16,6 +19,13 @@ class MainState extends FlxState
 	 */
 	override public function create():Void
 	{
+		var mapFactory = new MapFactory();
+		var map = mapFactory.makeMap(AssetPaths.map1__oel, AssetPaths.tiles1__png, "tiles");
+		var pika = new Pikachu();
+		var mapHandler = new PokeMapHandler();
+		mapHandler.placePokemon(map, pika, 11, 11, false);
+		add(map);
+		add(pika);
 		super.create();
 	}
 
