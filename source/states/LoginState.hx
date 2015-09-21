@@ -36,7 +36,7 @@ class LoginState extends FlxState
 		add(_background);
 		
 		// Add username input text field
-		_usernameInput = new CustomInputText(0, 0, 150, "Username", 12, FlxColor.WHITE, FlxColor.GRAY, true, AssetPaths.ARIAL__TTF);
+		_usernameInput = new CustomInputText(0, 0, 150, "Username", 12, FlxColor.WHITE, FlxColor.GRAY, true);
 		_usernameInput.x = (FlxG.width / 2) - (_usernameInput.width / 2);
 		_usernameInput.y = (FlxG.height * 3.2 / 5) - (_usernameInput.height / 2);
 		_usernameInput.fieldBorderThickness = 0;
@@ -44,7 +44,7 @@ class LoginState extends FlxState
 		add(_usernameInput);
 		
 		// Add password input text field
-		_passwordInput = new CustomInputText(0, 0, 150, "Password", 12, FlxColor.WHITE, FlxColor.GRAY, true, AssetPaths.ARIAL__TTF);
+		_passwordInput = new CustomInputText(0, 0, 150, "Password", 12, FlxColor.WHITE, FlxColor.GRAY, true);
 		_passwordInput.x = (FlxG.width / 2) - (_passwordInput.width / 2);
 		_passwordInput.y = (FlxG.height * 3.5 / 5) - (_passwordInput.height / 2);
 		_passwordInput.fieldBorderThickness = 0;
