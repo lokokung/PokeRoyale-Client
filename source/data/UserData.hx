@@ -1,15 +1,13 @@
 package data;
 
 /**
- * ...
  * @author Lokbondo Kung; Celia Zhang
  */
-class UserData
+typedef UserData =
 {
-
-	public function new() 
-	{
-		
-	}
-	
+	var sessionId:String;
+	var userName: String;
+	var userId:Int;
+	var buddyList:Array<BuddyInstance>;
+	var matchList:Array<MatchInstance>;
 }

@@ -33,7 +33,7 @@ class Raichu extends AbstractPokemon implements IPokemon
 		animation.add("hurt_lr", [6, 11, 7, 11, 8, 11], 2, true);
 
 		
-		animation.play("hurt_lr");
+		animation.play("d");
 	}
 	
 }
