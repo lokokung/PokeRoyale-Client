@@ -7,6 +7,7 @@ import flixel.util.FlxColor;
 import sprites.maps.MapFactory;
 import sprites.PokeMapHandler;
 import sprites.pokemon.Pikachu;
+import sprites.pokemon.Raichu;
 
 /**
  * ...
@@ -22,10 +23,13 @@ class MainState extends FlxState
 		var mapFactory = new MapFactory();
 		var map = mapFactory.makeMap(AssetPaths.map1__oel, AssetPaths.tiles1__png, "tiles");
 		var pika = new Pikachu();
+		var rai = new Raichu();
 		var mapHandler = new PokeMapHandler();
 		mapHandler.placePokemon(map, pika, 11, 11, false);
+		mapHandler.placePokemon(map, rai, 10, 11, false);
 		add(map);
 		add(pika);
+		add(rai);
 		super.create();
 	}
 
