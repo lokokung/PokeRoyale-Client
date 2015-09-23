@@ -97,6 +97,7 @@ class LoginState extends FlxState
 	
 	private function clickLogin():Void
 	{
+		Reg.rh.requestSession();
 		FlxG.switchState(new MainState());
 	}
 }

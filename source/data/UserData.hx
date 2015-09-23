@@ -5,9 +5,9 @@ package data;
  */
 typedef UserData =
 {
-	var sessionId:String;
-	var userName: String;
+	var playerName: String;
 	var userId:Int;
+	var gold:Int;
 	var buddyList:Array<BuddyInstance>;
 	var matchList:Array<MatchInstance>;
 }
