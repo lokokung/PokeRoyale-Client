@@ -9,14 +9,15 @@ class MatchInstance
 	private var _opponentName:String;
 	private var _matchId:Int;
 	private var _availableMaps:Array<Int>;
-	private var _startTime:Date;
+	private var _startTime:Float;
 	
-	public function new(opponent_id:Int, opponent_name:String, match_id:Int, available_maps:Array<Int>, start_time:Date) 
+	public function new(opponent_id:Int, opponent_name:String, match_id:Int, available_maps:Array<Int>, start_time:Float) 
 	{
 		_opponentId = opponent_id;
 		_opponentName = opponent_name;
 		_matchId = match_id;
 		_availableMaps = available_maps;
+		_startTime = start_time;
 	}
 	
 	public function getOpponentId():Int
@@ -39,7 +40,7 @@ class MatchInstance
 		return _availableMaps;
 	}
 	
-	public function getStartTime():Date
+	public function getStartTime():Float
 	{
 		return _startTime;
 	}
