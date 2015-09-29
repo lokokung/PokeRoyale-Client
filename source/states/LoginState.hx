@@ -10,6 +10,7 @@ import flixel.util.FlxDestroyUtil;
 import flixel.addons.ui.FlxInputText;
 import flixel.util.FlxColor;
 import gui.CustomInputText;
+import haxe.Json;
 using flixel.util.FlxSpriteUtil;
 
 /**
@@ -57,6 +58,12 @@ class LoginState extends FlxState
 		_btnLogin.y = (FlxG.height * 4/5) - (_btnLogin.height/2);
 		add(_btnLogin);
 		
+		var dateTest:Date = Date.now();
+		var jsonTester = Json.stringify(dateTest);
+		var dateParse:Date = Json.parse(jsonTester);
+		trace(jsonTester);
+		trace(dateParse);
+		
 		super.create();
 	}
 
@@ -97,7 +104,18 @@ class LoginState extends FlxState
 	
 	private function clickLogin():Void
 	{
-		//Reg.rh.requestSession();
-		FlxG.switchState(new MainState());
+		// Reg.rh.requestSession();
+		// var canLogin = Reg.rh.requestLogin(_username, _password);
+		var canLogin = true;
+		if (canLogin)
+		{
+			FlxG.switchState(new MainState());
+			trace("Successfully logged in!");
+		}
+		else 
+		{
+			trace("Failed to login...");
+			FlxG.switchState(new MainState());
+		}
 	}
 }

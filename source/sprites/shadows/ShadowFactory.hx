@@ -8,14 +8,8 @@ import flixel.FlxSprite;
 class ShadowFactory
 {
 	
-	private var xOffset_0:Float = 0;
-	private vat yOffset_0:Float = 0;
-	
-	private var xOffset_1:Float = 0;
-	private vat yOffset_1:Float = 0;
-	
-	private var xOffset_2:Float = 0;
-	private vat yOffset_2:Float = 0;
+	public var xOffset:Float = 0;
+	public var yOffset:Float = 0;
 
 	public function new() 
 	{
@@ -24,7 +18,10 @@ class ShadowFactory
 	
 	public function makeShadow(ShadowSize:Int):FlxSprite
 	{
-		
+		var shadowSprite:FlxSprite = new FlxSprite(0, 0);
+		shadowSprite.loadGraphic(AssetPaths.Shadows__png, 22, 8);
+		shadowSprite.frame = ShadowSize;
+		return shadowSprite;
 	}
 	
 }

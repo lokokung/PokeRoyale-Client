@@ -10,10 +10,14 @@ import flixel.FlxState;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
+import flixel.addons.plugin.FlxMouseControl;
+import sprites.AbstractPokemon;
 import sprites.maps.MapFactory;
+import sprites.IPokemon;
 import sprites.PokeMapHandler;
 import sprites.pokemon.Pikachu;
 import sprites.pokemon.Raichu;
+import sprites.PokemonIdMap;
 
 /**
  * ...

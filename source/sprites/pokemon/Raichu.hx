@@ -9,17 +9,14 @@ import sprites.AbstractPokemon;
  */
 class Raichu extends AbstractPokemon implements IPokemon
 {
-	public var xOffset:Float;
-	public var yOffset:Float;
-	public var shadowSize:Int;
+	public var xOffset:Float = -5;
+	public var yOffset:Float = -6;
+	public var shadowSize:Int = 0;
+	public var shadowSprite:FlxSprite = null;
 
 	public function new(X:Float=0, Y:Float=0) 
 	{
 		super(X, Y);
-		
-		xOffset = -3;
-		yOffset = -6;
-		shadowSize = 0;
 		
 		loadGraphic(PokeSpritePaths.Raichu_026_Sprites__png, true, 30, 30);
 		setFacingFlip(FlxObject.LEFT, false, false);

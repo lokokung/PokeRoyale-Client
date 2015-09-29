@@ -9,17 +9,14 @@ import sprites.AbstractPokemon;
  */
 class Pikachu extends AbstractPokemon implements IPokemon
 {
-	public var xOffset:Float;
-	public var yOffset:Float;
-	public var shadowSize:Int;
+	public var xOffset:Float = 0;
+	public var yOffset:Float = -4;
+	public var shadowSize:Int = 0;
+	public var shadowSprite:FlxSprite = null;
 
 	public function new(X:Float=0, Y:Float=0) 
 	{
 		super(X, Y);
-		
-		xOffset = 0;
-		yOffset = -4;
-		shadowSize = 0;
 		
 		loadGraphic(PokeSpritePaths.Pikachu_025_Sprites__png, true, 24, 26);
 		setFacingFlip(FlxObject.LEFT, false, false);
@@ -30,6 +27,7 @@ class Pikachu extends AbstractPokemon implements IPokemon
 		animation.add("d", [1, 0, 1, 2], 2, true);
 		
 		animation.play("d");
+		
 	}
 	
 }
